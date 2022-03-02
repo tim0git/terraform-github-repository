@@ -14,7 +14,8 @@ Inputs (optional):
 Example 1 - Private repository (Terraform .gitignore) with vulnerability alerts enabled
 ```hcl
 module "github_repository" {
-  source = "../../"
+  source = "tim0git/repository/github"
+  version = "1.0.0"
   name = "example-repo-name"
   description = "example-repo-description"
 }
@@ -23,7 +24,8 @@ module "github_repository" {
 Example 2 - Public repository (Go .gitignore) with vulnerability alerts enabled
 ```hcl
 module "github_repository" {
-  source = "../../"
+  source = "tim0git/repository/github"
+  version = "1.0.0"
   name = "example-repo-name"
   description = "example-repo-description"
   private = false
@@ -34,7 +36,8 @@ module "github_repository" {
 Example 2 - Public repository (Go .gitignore) with vulnerability alerts disabled
 ```hcl
 module "github_repository" {
-  source = "../../"
+  source = "tim0git/repository/github"
+  version = "1.0.0"
   name = "example-repo-name"
   description = "example-repo-description"
   private = false
@@ -42,4 +45,3 @@ module "github_repository" {
   vulnerability_alerts = false
 }
 ```
-
